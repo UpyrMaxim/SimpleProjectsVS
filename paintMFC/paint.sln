@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "paint", "paint\paint.vcxproj", "{3E8D3054-2506-464A-BF8E-32817499B8A4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "paint", "paint\paint.vcxproj", "{E6782B85-EF14-49F0-9F6D-D40F6BA43175}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,19 +13,19 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3E8D3054-2506-464A-BF8E-32817499B8A4}.Debug|x64.ActiveCfg = Debug|x64
-		{3E8D3054-2506-464A-BF8E-32817499B8A4}.Debug|x64.Build.0 = Debug|x64
-		{3E8D3054-2506-464A-BF8E-32817499B8A4}.Debug|x86.ActiveCfg = Debug|Win32
-		{3E8D3054-2506-464A-BF8E-32817499B8A4}.Debug|x86.Build.0 = Debug|Win32
-		{3E8D3054-2506-464A-BF8E-32817499B8A4}.Release|x64.ActiveCfg = Release|x64
-		{3E8D3054-2506-464A-BF8E-32817499B8A4}.Release|x64.Build.0 = Release|x64
-		{3E8D3054-2506-464A-BF8E-32817499B8A4}.Release|x86.ActiveCfg = Release|Win32
-		{3E8D3054-2506-464A-BF8E-32817499B8A4}.Release|x86.Build.0 = Release|Win32
+		{E6782B85-EF14-49F0-9F6D-D40F6BA43175}.Debug|x64.ActiveCfg = Debug|x64
+		{E6782B85-EF14-49F0-9F6D-D40F6BA43175}.Debug|x64.Build.0 = Debug|x64
+		{E6782B85-EF14-49F0-9F6D-D40F6BA43175}.Debug|x86.ActiveCfg = Debug|Win32
+		{E6782B85-EF14-49F0-9F6D-D40F6BA43175}.Debug|x86.Build.0 = Debug|Win32
+		{E6782B85-EF14-49F0-9F6D-D40F6BA43175}.Release|x64.ActiveCfg = Release|x64
+		{E6782B85-EF14-49F0-9F6D-D40F6BA43175}.Release|x64.Build.0 = Release|x64
+		{E6782B85-EF14-49F0-9F6D-D40F6BA43175}.Release|x86.ActiveCfg = Release|Win32
+		{E6782B85-EF14-49F0-9F6D-D40F6BA43175}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DCF2E357-F407-417C-B458-F6B27E54CFEC}
+		SolutionGuid = {75418A7F-B147-4579-8CF1-92411624A29B}
 	EndGlobalSection
 EndGlobal

@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{3E8D3054-2506-464A-BF8E-32817499B8A4}</ProjectGuid>
+    <ProjectGuid>{E6782B85-EF14-49F0-9F6D-D40F6BA43175}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
     <RootNamespace>paint</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
@@ -207,14 +207,12 @@
     <ResourceCompile Include="paint.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="res\paint.rc2" />
+  </ItemGroup>
+  <ItemGroup>
     <Image Include="res\paint.ico" />
     <Image Include="res\paintDoc.ico" />
     <Image Include="res\Toolbar.bmp" />
-    <Image Include="res\Toolbar256.bmp" />
-    <Image Include="res\userimages.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\paint.rc2" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

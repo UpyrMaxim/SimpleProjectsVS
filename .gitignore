@@ -4,3 +4,6 @@ paintMFC/paint/paint/
 paintMFC/paint/x64/
 paintMFC/x64/
 paintMFC/paint/paint.sln
+paintMFC/Debug/
+paintMFC/paint/Debug/
+test/
