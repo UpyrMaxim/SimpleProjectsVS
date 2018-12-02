@@ -42,13 +42,13 @@
     <ClInclude Include="PPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rectangle.h">
+    <ClInclude Include="PRectangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Line.h">
+    <ClInclude Include="PLine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ellipse.h">
+    <ClInclude Include="PEllipse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,13 +74,13 @@
     <ClCompile Include="PPoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
+    <ClCompile Include="PLine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Line.cpp">
+    <ClCompile Include="PEllipse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ellipse.cpp">
+    <ClCompile Include="PRectangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
