@@ -5,6 +5,6 @@ public:
 	BasicPaintType();
 	~BasicPaintType();
 private:
-	
+
 };
 
