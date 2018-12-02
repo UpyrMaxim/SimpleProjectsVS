@@ -2,7 +2,7 @@
 #include "Rectangle.h"
 
 
-PRectangle::PRectangle()
+PRectangle::PRectangle(unsigned long color, int width) : BasicPaintType(color, width)
 {
 }
 

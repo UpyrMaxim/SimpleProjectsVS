@@ -2,7 +2,7 @@
 #include "Line.h"
 
 
-PLine::PLine()
+PLine::PLine(unsigned long color, int width) : BasicPaintType(color, width)
 {
 }
 

@@ -4,7 +4,7 @@ class PEllipse :
 	public BasicPaintType
 {
 public:
-	PEllipse();
+	PEllipse(unsigned long color, int width);
 	~PEllipse();
 };
 

@@ -4,7 +4,7 @@ class PLine :
 	public BasicPaintType
 {
 public:
-	PLine();
+	PLine(unsigned long, int);
 	~PLine();
 };
 

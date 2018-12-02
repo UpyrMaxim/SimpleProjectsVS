@@ -1,28 +1,32 @@
 #pragma once
 #include "paintDoc.h"
 
+//
+//struct figure
+//{
+//	CPoint frstP;
+//	CPoint secP;
+//	unsigned long color;
+//	int width;
+//	CString figureName;
+//};
 
-struct figure
-{
-	CPoint frstP;
-	CPoint secP;
-	unsigned long color;
-	int width;
-};
-
+class CpaintDoc;
 
 class BasicPaintType
 {
 public:
-	BasicPaintType();
+	BasicPaintType(unsigned long,int);
 	~BasicPaintType();
-	virtual void mouseDown() = 0;
-	virtual void mouseMove() = 0;
-	virtual void mouseUp() = 0;
+	virtual void mouseDown(CPoint &, CpaintDoc* doc, unsigned long color = 0, int width = 1) = 0;
+	virtual void mouseMove(CPoint &, CpaintDoc* doc, unsigned long color = 0, int width = 1) = 0;
+	virtual void mouseUp(CPoint &,CpaintDoc* doc, unsigned long color = 0, int width = 1) = 0;
+	virtual void Draw(CDC* pDC, const figure& Figire) = 0;
+	void SetColor(unsigned long);
+	void SetWidth(int);
 	const figure & GetFigure();
 
-private:
+protected:
 	figure MyFigure;
-	CpaintDoc* pDoc;
 };
 

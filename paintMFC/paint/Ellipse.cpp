@@ -2,7 +2,7 @@
 #include "Ellipse.h"
 
 
-PEllipse::PEllipse()
+PEllipse::PEllipse(unsigned long color, int width) : BasicPaintType(color, width)
 {
 }
 

@@ -4,7 +4,7 @@ class PRectangle :
 	public BasicPaintType
 {
 public:
-	PRectangle();
+	PRectangle(unsigned long color, int width);
 	~PRectangle();
 };
 
