@@ -185,6 +185,7 @@
   <ItemGroup>
     <ClInclude Include="BasicPaintType.h" />
     <ClInclude Include="PEllipse.h" />
+    <ClInclude Include="PEraser.h" />
     <ClInclude Include="PLine.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="paint.h" />
@@ -199,6 +200,7 @@
   <ItemGroup>
     <ClCompile Include="BasicPaintType.cpp" />
     <ClCompile Include="PEllipse.cpp" />
+    <ClCompile Include="PEraser.cpp" />
     <ClCompile Include="PLine.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="paint.cpp" />

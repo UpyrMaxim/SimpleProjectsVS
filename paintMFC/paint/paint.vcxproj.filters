@@ -51,6 +51,9 @@
     <ClInclude Include="PEllipse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PEraser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="paint.cpp">
@@ -81,6 +84,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PRectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PEraser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
