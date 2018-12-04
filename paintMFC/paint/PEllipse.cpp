@@ -9,14 +9,13 @@ void PEllipse::mouseDown(CPoint & point, CpaintDoc * doc, unsigned long color, i
 	MyFigure.width = width;
 }
 
-void PEllipse::mouseMove(CPoint &, CpaintDoc * doc, unsigned long color, int width)
+bool PEllipse::mouseMove(CPoint &, CpaintDoc * doc)
 {
+	return false;
 }
 
-void PEllipse::mouseUp(CPoint & point, CpaintDoc * doc, unsigned long color, int width)
+void PEllipse::mouseUp(CPoint & point, CpaintDoc * doc)
 {
-	MyFigure.color = color;
-	MyFigure.width = width;
 	MyFigure.secP = point;
 	doc->addPoint(MyFigure);
 }
@@ -26,7 +25,7 @@ void PEllipse::Draw(CDC * pDC, const figure & Figire)
 	pDC->Ellipse(Figire.frstP.x, Figire.frstP.y, Figire.secP.x, Figire.secP.y);
 }
 
-PEllipse::PEllipse(unsigned long color, int width) : BasicPaintType(color, width)
+PEllipse::PEllipse()
 {
 	MyFigure.figureName = L"PEllipse";
 }

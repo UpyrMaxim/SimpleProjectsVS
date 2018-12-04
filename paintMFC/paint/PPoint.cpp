@@ -9,20 +9,17 @@ void PPoint::mouseDown(CPoint & point, CpaintDoc* doc, unsigned long color, int 
 	MyFigure.width = width;
 }
 
-void PPoint::mouseMove(CPoint & point, CpaintDoc* doc, unsigned long color, int width)
+bool PPoint::mouseMove(CPoint & point, CpaintDoc* doc)
 {
-	MyFigure.color = color;
-	MyFigure.width = width;
 	MyFigure.secP = point;
 	doc->addPoint(MyFigure);
 	MyFigure.frstP = point;
+	return true;
 
 }
 
-void PPoint::mouseUp(CPoint & point, CpaintDoc* doc, unsigned long color, int width)
+void PPoint::mouseUp(CPoint & point, CpaintDoc* doc)
 {
-	MyFigure.color = color;
-	MyFigure.width = width;
 	MyFigure.secP = point;
 	doc->addPoint(MyFigure);
 }
@@ -33,7 +30,7 @@ void PPoint::Draw(CDC * pDC, const figure & Figire)
 	pDC->LineTo(Figire.secP);
 }
 
-PPoint::PPoint(unsigned long color, int width) : BasicPaintType(color, width)
+PPoint::PPoint()
 {
 	MyFigure.figureName = L"PPoint";
 }

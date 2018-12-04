@@ -9,14 +9,13 @@ void PLine::mouseDown(CPoint & point, CpaintDoc * doc, unsigned long color, int 
 	MyFigure.width = width;
 }
 
-void PLine::mouseMove(CPoint &, CpaintDoc * doc, unsigned long color, int width)
+bool PLine::mouseMove(CPoint &, CpaintDoc * doc)
 {
+	return false;
 }
 
-void PLine::mouseUp(CPoint & point, CpaintDoc * doc, unsigned long color, int width)
+void PLine::mouseUp(CPoint & point, CpaintDoc * doc)
 {
-	MyFigure.color = color;
-	MyFigure.width = width;
 	MyFigure.secP = point;
 	doc->addPoint(MyFigure);
 }
@@ -27,7 +26,7 @@ void PLine::Draw(CDC * pDC, const figure & Figire)
 	pDC->LineTo(Figire.secP);
 }
 
-PLine::PLine(unsigned long color, int width) : BasicPaintType(color, width)
+PLine::PLine()
 {
 	MyFigure.figureName = L"PLine";
 }

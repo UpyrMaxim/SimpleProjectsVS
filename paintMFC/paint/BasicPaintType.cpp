@@ -2,11 +2,8 @@
 #include "BasicPaintType.h"
 
 
-BasicPaintType::BasicPaintType(unsigned long color, int width)
+BasicPaintType::BasicPaintType()
 {
-
-	MyFigure.color = color;
-	MyFigure.width = width;
 }
 
 

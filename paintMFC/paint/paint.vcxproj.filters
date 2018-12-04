@@ -54,6 +54,9 @@
     <ClInclude Include="PEraser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="simpleFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="paint.cpp">
@@ -87,6 +90,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PEraser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="simpleFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
