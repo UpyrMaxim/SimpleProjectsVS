@@ -2,22 +2,22 @@
 #include "simpleFactory.h"
 
 
-BasicPaintType* SimpleFactory::createFigureInstance(CString typeName)
+std::shared_ptr<BasicPaintType> SimpleFactory::createFigureInstance(CString typeName)
 {
 	if (typeName == L"PPoint")
-		return new PPoint();
+		return std::shared_ptr<PPoint>(new PPoint());
 
 	if (typeName == L"PLine")
-		return new PLine();
+		return  std::shared_ptr<PLine>(new PLine());
 
 	if (typeName == L"PEllipse")
-		return new PEllipse();
+		return  std::shared_ptr<PEllipse>(new PEllipse());
 
 	if (typeName == L"PRectangle")
-		return new PRectangle();
+		return  std::shared_ptr<PRectangle>(new PRectangle());
 
 	if (typeName == L"PEraser")
-		return new PEraser();
+		return  std::shared_ptr<PEraser>(new PEraser());
 
 	return nullptr;
 }

@@ -4,11 +4,12 @@
 #include "PEllipse.h"
 #include "PRectangle.h"
 #include "PEraser.h"
+#include <memory>
 
 class SimpleFactory
 {
 public:
-	BasicPaintType* createFigureInstance(CString);
+	std::shared_ptr<BasicPaintType> createFigureInstance(CString);
 	SimpleFactory();
 	~SimpleFactory();
 };
