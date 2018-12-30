@@ -1,4 +1,4 @@
-# SimpleProjectVS
+## SimpleProjectVS
 Simple projects to learn aspects of c++
 
 # paintMFC
