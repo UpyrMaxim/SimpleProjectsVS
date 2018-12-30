@@ -1,9 +1,4 @@
-paintMFC/paint/.vs/
-paintMFC/.vs/
-paintMFC/paint/paint/
-paintMFC/paint/x64/
-paintMFC/x64/
-paintMFC/paint/paint.sln
-paintMFC/Debug/
-paintMFC/paint/Debug/
+.vs/
+x64/
+Debug/
 test/
