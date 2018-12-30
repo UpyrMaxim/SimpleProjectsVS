@@ -9,7 +9,7 @@
 class SimpleFactory
 {
 public:
-	std::shared_ptr<BasicPaintType> createFigureInstance(CString);
+	std::unique_ptr<BasicPaintType> createFigureInstance(CString);
 	SimpleFactory();
 	~SimpleFactory();
 };
