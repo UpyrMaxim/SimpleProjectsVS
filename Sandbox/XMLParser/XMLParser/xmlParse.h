@@ -9,8 +9,10 @@ class xmlParse
 public:
 	xmlParse(const string&);
 
-	string getString() const { return string(content); }
 	void setString(string &str) { content = str; }
+	string getString() const { return string(content); }
+	void loadFileData(const string &);
+	void saveDateToFile(const string& , list<unsigned int>& );
 
 	string find(const string&, unsigned int = 0) const;
 	list<string> findAll(const string&) const;
@@ -18,6 +20,7 @@ public:
 	class xmlException;
 	class xmlIncorrectContent;
 	class xmlEmpty;
+	class fileNotOpened;
 private:
 	int searchPosition(const string&, unsigned int = 0) const;
 	string content;
@@ -28,7 +31,7 @@ private:
 class xmlParse::xmlException
 {
 public:
-	xmlException(string);
+	xmlException(const string &);
 	virtual ~xmlException() = 0;
 	const string& getMessage() const;
 private:
@@ -45,4 +48,10 @@ class xmlParse::xmlEmpty : public xmlException
 {
 public:
 	xmlEmpty();
+};
+
+class xmlParse::fileNotOpened : public xmlException
+{
+public:
+	fileNotOpened(const string & fileName);
 };

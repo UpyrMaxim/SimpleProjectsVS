@@ -1,10 +1,38 @@
 #include "pch.h"
-#include "xmlParser.h"
+#include "xmlParse.h"
 
-xmlParse::xmlParse(const string & str) :
-	content(str)
+xmlParse::xmlParse(const string & fileName)
 {
+	loadFileData(fileName);
+}
 
+xmlParse::xmlParse()
+{}
+
+void xmlParse::loadFileData(const string & fileName)
+{
+	ifstream ifs(fileName);
+	if (!ifs.is_open())
+		throw fileNotOpened(fileName);
+	content.assign((std::istreambuf_iterator<char>(ifs)),
+		(std::istreambuf_iterator<char>()));
+}
+
+void xmlParse::saveDateToFile(const string& fileName, list<unsigned int>& result)
+{
+	string res;
+	for (auto iter : result)
+		res += to_string(iter) + ' ';
+	res = "\n  <primes> " + res + "</primes>";
+
+	auto pos = content.find_last_of("</root>") - sizeof("<root>");
+	content.insert(pos, res);
+
+	ofstream file('n' + fileName);
+	if (!file.is_open())
+		throw fileNotOpened(fileName);
+	file << content;
+	file.close();
 }
 
 //Returns a substring between first <findTeg> and </findTag>,
@@ -76,7 +104,7 @@ int xmlParse::searchPosition(const string & tag, unsigned int beginPosition) con
 }
 
 
-xmlParse::xmlException::xmlException(string msg) :
+xmlParse::xmlException::xmlException(const string & msg) :
 	message("XML exception: " + msg)
 {}
 
@@ -94,4 +122,8 @@ xmlParse::xmlIncorrectContent::xmlIncorrectContent() :
 
 xmlParse::xmlEmpty::xmlEmpty() :
 	xmlException("attempt to parse the empty file.")
+{}
+
+xmlParse::fileNotOpened::fileNotOpened(const string & fileName) :
+	xmlException("Failed to open the file \"" + fileName + "\"")
 {}
