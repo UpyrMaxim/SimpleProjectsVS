@@ -8,6 +8,7 @@ class xmlParse
 {
 public:
 	xmlParse(const string&);
+	xmlParse();
 
 	void setString(string &str) { content = str; }
 	string getString() const { return string(content); }
