@@ -23,7 +23,7 @@ void xmlParse::saveDateToFile(const string& fileName, list<unsigned int>& result
 	auto pos = content.find_last_of("</root>") - sizeof("<root>");
 	content.insert(pos, res);
 
-	ofstream file('n' + fileName);
+	ofstream file("new_" + fileName);
 	if (!file.is_open())
 		throw fileNotOpened(fileName);
 	file << content;
