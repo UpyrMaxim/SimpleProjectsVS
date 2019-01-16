@@ -7,12 +7,11 @@ using namespace std;
 class xmlParse
 {
 public:
-	xmlParse(const string&);
 	xmlParse();
 
-	void setString(string &str) { content = str; }
+	void setString(string& str) { content = str; }
 	string getString() const { return string(content); }
-	void loadFileData(const string &);
+	void loadFileData(const string&);
 	void saveDateToFile(const string& , list<unsigned int>& );
 
 	string find(const string&, unsigned int = 0) const;
@@ -32,7 +31,7 @@ private:
 class xmlParse::xmlException
 {
 public:
-	xmlException(const string &);
+	xmlException(const string&);
 	virtual ~xmlException() = 0;
 	const string& getMessage() const;
 private:
@@ -54,5 +53,5 @@ public:
 class xmlParse::fileNotOpened : public xmlException
 {
 public:
-	fileNotOpened(const string & fileName);
+	fileNotOpened(const string&);
 };

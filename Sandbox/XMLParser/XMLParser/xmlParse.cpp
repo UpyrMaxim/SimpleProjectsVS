@@ -1,20 +1,15 @@
 #include "pch.h"
 #include "xmlParse.h"
 
-xmlParse::xmlParse(const string & fileName)
-{
-	loadFileData(fileName);
-}
-
 xmlParse::xmlParse()
 {}
 
-void xmlParse::loadFileData(const string & fileName)
+void xmlParse::loadFileData(const string& fileName)
 {
-	ifstream ifs(fileName);
-	if (!ifs.is_open())
+	ifstream ifile(fileName);
+	if (!ifile.is_open())
 		throw fileNotOpened(fileName);
-	content.assign((std::istreambuf_iterator<char>(ifs)),
+	content.assign((std::istreambuf_iterator<char>(ifile)),
 		(std::istreambuf_iterator<char>()));
 }
 
@@ -35,8 +30,6 @@ void xmlParse::saveDateToFile(const string& fileName, list<unsigned int>& result
 	file.close();
 }
 
-//Returns a substring between first <findTeg> and </findTag>,
-//beginPosition - from where will be performed search
 string xmlParse::find(const string& findTag, unsigned int beginPosition) const
 {
 	if (content.length() == 0)
@@ -58,8 +51,7 @@ string xmlParse::find(const string& findTag, unsigned int beginPosition) const
 	return string(content, begin, end - begin);
 }
 
-//Returns list of results find(..).
-list<string> xmlParse::findAll(const string & findTag) const
+list<string> xmlParse::findAll(const string& findTag) const
 {
 	if (content.length() == 0)
 		throw xmlEmpty();
@@ -79,8 +71,7 @@ list<string> xmlParse::findAll(const string & findTag) const
 	return list<string>(searchedList);
 }
 
-//Returns position of first symbol of find tag ('<')
-int xmlParse::searchPosition(const string & tag, unsigned int beginPosition) const
+int xmlParse::searchPosition(const string& tag, unsigned int beginPosition) const
 {
 	bool successful = false;
 	for (auto i = beginPosition; i < content.length(); i++)
@@ -104,26 +95,26 @@ int xmlParse::searchPosition(const string & tag, unsigned int beginPosition) con
 }
 
 
-xmlParse::xmlException::xmlException(const string & msg) :
+xmlParse::xmlException::xmlException(const string& msg) :
 	message("XML exception: " + msg)
 {}
 
 xmlParse::xmlException::~xmlException()
 {}
 
-const string & xmlParse::xmlException::getMessage() const
+const string& xmlParse::xmlException::getMessage() const
 {
 	return message;
 }
 
 xmlParse::xmlIncorrectContent::xmlIncorrectContent() :
-	xmlException("incorrect content for parse.")
+	xmlException("Incorrect content for parse.")
 {}
 
 xmlParse::xmlEmpty::xmlEmpty() :
-	xmlException("attempt to parse the empty file.")
+	xmlException("Attempt to parse the empty file.")
 {}
 
-xmlParse::fileNotOpened::fileNotOpened(const string & fileName) :
+xmlParse::fileNotOpened::fileNotOpened(const string& fileName) :
 	xmlException("Failed to open the file \"" + fileName + "\"")
 {}

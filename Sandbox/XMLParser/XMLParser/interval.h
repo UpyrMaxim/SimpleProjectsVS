@@ -4,9 +4,7 @@ class interval
 public:
 	typedef unsigned int uint;
 
-	interval(uint l, uint r) :
-		leftLimit(l),
-		rightLimit(r)
+	interval(uint left, uint right) : leftLimit(left), rightLimit(right)
 	{}
 	~interval() {}
 
