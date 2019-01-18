@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CSet.h" />
+    <ClInclude Include="CSetNode.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>

@@ -4,8 +4,8 @@ template <class KeyType>
 class CSetNode
 {
 public:
-	CSetNode * LeftChild;
-	CSetNode * RightChild;
+	CSetNode* LeftChild;
+	CSetNode* RightChild;
 
 	bool isRed() { return isRed; }
 	void setKey(const KeyType& param) { key = param; }
