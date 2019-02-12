@@ -1,0 +1,17 @@
+<root>
+ <intervals>
+   <interval>
+     <low> 100 </low>
+     <high> 200</high>
+   </interval>
+   <interval>
+      <low> 170</low>
+      <high> 290</high>
+   </interval>
+   <interval>
+      <low> 250</low>
+      <high> 333</high>
+    </interval>
+  </intervals>
+  <primes> 173 179 181 191 101 103 107 109 113 127 131 251 137 139 257 263 269 271 149 277 281 151 157 283 293 307 311 193 197 199 211 223 227 229 163 167 173 233 239 241 251 313 317 257 331 263 269 271 277 281 283 179 181 191 193 197 199 </primes>
+</root>

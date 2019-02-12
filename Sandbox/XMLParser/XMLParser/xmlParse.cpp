@@ -2,32 +2,22 @@
 #include "xmlParse.h"
 
 xmlParse::xmlParse()
-{}
-
-void xmlParse::loadFileData(const string& fileName)
 {
-	ifstream ifile(fileName);
-	if (!ifile.is_open())
-		throw fileNotOpened(fileName);
-	content.assign((std::istreambuf_iterator<char>(ifile)),
-		(std::istreambuf_iterator<char>()));
 }
 
-void xmlParse::saveDateToFile(const string& fileName, list<unsigned int>& result)
+xmlParse::xmlParse(const string& strContent) : content(strContent)
+{
+}
+
+
+string xmlParse::makeXMLString(list<unsigned int>& result)
 {
 	string res;
-	for (auto iter : result)
+	for (auto iter : result) {
 		res += to_string(iter) + ' ';
+	}
 	res = "\n  <primes> " + res + "</primes>";
-
-	auto pos = content.find_last_of("</root>") - sizeof("<root>");
-	content.insert(pos, res);
-
-	ofstream file("new_" + fileName);
-	if (!file.is_open())
-		throw fileNotOpened(fileName);
-	file << content;
-	file.close();
+	return forward<string>(res);
 }
 
 string xmlParse::find(const string& findTag, unsigned int beginPosition) const
@@ -95,26 +85,17 @@ int xmlParse::searchPosition(const string& tag, unsigned int beginPosition) cons
 }
 
 
-xmlParse::xmlException::xmlException(const string& msg) :
-	message("XML exception: " + msg)
-{}
-
-xmlParse::xmlException::~xmlException()
-{}
-
-const string& xmlParse::xmlException::getMessage() const
+xmlParse::xmlIncorrectContent::xmlIncorrectContent() :
+	MyException("Incorrect content for parse.")
 {
-	return message;
 }
 
-xmlParse::xmlIncorrectContent::xmlIncorrectContent() :
-	xmlException("Incorrect content for parse.")
-{}
-
 xmlParse::xmlEmpty::xmlEmpty() :
-	xmlException("Attempt to parse the empty file.")
-{}
+	MyException("Attempt to parse the empty file.")
+{
+}
 
 xmlParse::fileNotOpened::fileNotOpened(const string& fileName) :
-	xmlException("Failed to open the file \"" + fileName + "\"")
-{}
+	MyException("Failed to open the file \"" + fileName + "\"")
+{
+}

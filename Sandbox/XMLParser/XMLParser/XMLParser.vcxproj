@@ -151,11 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="FileService.h" />
     <ClInclude Include="interval.h" />
+    <ClInclude Include="MyException.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="xmlParse.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FileService.cpp" />
+    <ClCompile Include="MyException.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
