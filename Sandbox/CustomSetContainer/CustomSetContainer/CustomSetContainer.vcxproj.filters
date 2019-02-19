@@ -29,10 +29,13 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CustomSetContainer.cpp">
+    <ClCompile Include="CSet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CSet.cpp">
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSetNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

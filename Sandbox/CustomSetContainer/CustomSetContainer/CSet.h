@@ -7,6 +7,7 @@ class CSet
 public:
 	CSet();
 	~CSet();
+	int push(KeyType &);
 private:
 	CSetNode<KeyType> root;
 };

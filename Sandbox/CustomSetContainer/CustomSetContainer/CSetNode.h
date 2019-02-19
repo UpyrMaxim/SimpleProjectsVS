@@ -1,4 +1,5 @@
 #pragma once
+using namespace std;
 
 template <class KeyType>
 class CSetNode
@@ -7,15 +8,17 @@ public:
 	CSetNode* LeftChild;
 	CSetNode* RightChild;
 
-	bool isRed() { return isRed; }
+	bool isRed() { return is_red; }
 	void setKey(const KeyType& param) { key = param; }
 	void getKey() { return key; }
 
-	CSetNode(const KeyType& param) : key(param), isRed(false) {}
+	CSetNode* getLeftChild() { return LeftChild; }
+	CSetNode* getRightChild() { return RightChild; }
+
+	CSetNode(const KeyType& param) : key(param), is_red(false) {}
 	CSetNode() = default;
 	~CSetNode() = default;
 private:
-	bool isRed;
+	bool is_red;
 	KeyType key;
 };
-

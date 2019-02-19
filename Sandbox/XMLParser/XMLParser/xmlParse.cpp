@@ -10,14 +10,14 @@ xmlParse::xmlParse(const string& strContent) : content(strContent)
 }
 
 
-string xmlParse::makeXMLString(list<unsigned int>& result)
+string xmlParse::makeXMLString(list<unsigned int>& contentList)
 {
-	string res;
-	for (auto iter : result) {
-		res += to_string(iter) + ' ';
+	string resStr;
+	for (auto iter : contentList) {
+		resStr += to_string(iter) + ' ';
 	}
-	res = "\n  <primes> " + res + "</primes>";
-	return forward<string>(res);
+	resStr = "\n  <primes> " + resStr + "</primes>";
+	return forward<string>(resStr);
 }
 
 string xmlParse::find(const string& findTag, unsigned int beginPosition) const

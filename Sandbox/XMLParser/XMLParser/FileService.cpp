@@ -19,7 +19,7 @@ void FileService::insertToFileBefore(const string& fileName, const string& strin
 	auto pos = content.find_last_of("</" + beforeXmlElement + ">") - ("</" + beforeXmlElement  + ">").size();
 	content.insert(pos, stringData);
 
-	ofstream file("new_" + fileName);
+	ofstream file(fileName);
 	if (!file.is_open())
 		throw fileNotOpened(fileName);
 	file << content;

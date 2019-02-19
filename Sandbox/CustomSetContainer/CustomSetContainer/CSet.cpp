@@ -1,12 +1,18 @@
 #include "pch.h"
 #include "CSet.h"
 
-
-CSet::CSet()
+template <class KeyType>
+CSet<KeyType>::CSet()
 {
 }
 
-
-CSet::~CSet()
+template <class KeyType>
+CSet<KeyType>::~CSet()
 {
+}
+
+template<class KeyType>
+int CSet<KeyType>::push(KeyType &)
+{
+	return 0;
 }
