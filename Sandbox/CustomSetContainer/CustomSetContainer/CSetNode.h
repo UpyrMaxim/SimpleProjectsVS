@@ -1,7 +1,7 @@
 #pragma once
 using namespace std;
 
-template <class KeyType>
+template <class KeyType,class DataType>
 class CSetNode
 {
 public:
@@ -11,6 +11,7 @@ public:
 	bool isRed() { return is_red; }
 	void setKey(const KeyType& param) { key = param; }
 	void getKey() { return key; }
+	DataType getContent() { return content; }
 
 	CSetNode* getLeftChild() { return LeftChild; }
 	CSetNode* getRightChild() { return RightChild; }
@@ -21,4 +22,5 @@ public:
 private:
 	bool is_red;
 	KeyType key;
+	DataType content;
 };
